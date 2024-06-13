@@ -1,0 +1,232 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    justify-content: center;
+}
+.booklist-page {
+    display: block; 
+}
+
+.book-card {
+    margin: 30px;
+    padding: 20px;
+    cursor: pointer;
+    flex: 0 0 300px; 
+    transition: transform 0.2s; 
+    border-radius: 10px; 
+    background-color: #f8f9fa; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    transition: transform 0.2s, box-shadow 0.2s; /* Hiệu ứng chuyển động */
+    position: relative; /* Thêm vị trí tương đối */
+}
+
+.book-card .card-img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1rem;
+    object-fit: cover;  
+}
+
+.card-reviews{
+    margin-bottom:1rem;
+    display:flex;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:black;
+}
+
+.card-details {
+    padding: 5px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.book-title {
+    margin-bottom: 10px; 
+    font-size: 18px;
+    font-weight: bold; 
+    text-align: center; /* Căn giữa nội dung trong `card` */
+
+}
+
+.book-author {
+    margin-bottom: 5px; 
+}
+
+.author-label {
+    font-weight: bold; 
+    margin-right: 5px; 
+}
+
+.author-name {
+    color: #555; 
+}
+
+.book-quantity {
+    margin-bottom: 5px; 
+}
+
+.quantity-label {
+    font-weight: bold; 
+}
+
+.quantity-value {
+    color: #666; 
+
+}
+/* .control-bar {
+    display: flex;
+    margin-bottom: 20px;
+  } */
+.control-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+.search-box{
+    background: #dde6dd;
+    border-radius: 10px;
+    display:flex-end;
+    align-items: center;
+    margin-top:20px;
+    margin-right:10px;
+    max-width: 100%;
+    
+}
+.search-box input {
+    width: 100%;
+    border-radius: 5px;
+}
+.search-box .icon{
+color:#969393;
+   font-size:22px;
+   cursor:pointer;
+}
+.sort-dropdown {
+    padding: 8px 12px; /* Thêm khoảng đệm xung quanh văn bản */
+    border-radius: 5px; /* Bo tròn các góc */
+    border: 1px solid #ccc; /* Đường viền màu xám nhạt */
+    background-color: #f8f8f8; /* Màu nền nhạt */
+    color: #333; /* Màu văn bản */
+    font-size: 14px; /* Kích thước phông chữ */
+    outline: none; /* Loại bỏ đường viền xung quanh khi tập trung */
+    cursor: pointer; /* Con trỏ dạng tay khi di chuột lên */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+    margin-top:20px;
+    margin-left:30px;
+    justify-content: flex-end; /* Đặt dropdown list sang phải */
+
+  }
+  
+  .sort-dropdown:focus {
+    border-color: #007bff; /* Đường viền màu xanh lam khi tập trung */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Bóng đổ nhẹ */
+  }
+  .search-box-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.search-sort-container {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 150px;
+}
+/* .search-sort-container {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 150px;
+    background-color: white; 
+    padding: 10px; 
+    z-index: 999; 
+} */
+
+
+.book-actions-1 {
+    display: flex; /* Sử dụng flexbox */
+    justify-content: flex-end; /* Căn chỉnh các nút về phía bên phải */
+    padding: 10px; /* Khoảng cách bên trong */
+    margin-left:25px;
+    margin-top:20px;
+}
+
+.book-actions-1 button {
+    margin-left: 10px; /* Khoảng cách giữa các nút */
+    padding: 8px 12px; /* Khoảng cách bên trong nút */
+    border: none; /* Bỏ viền mặc định */
+    background-color: #007bff; /* Màu nền cho nút */
+    color: white; /* Màu chữ */
+    border-radius: 4px; /* Đường viền cong */
+    cursor: pointer; /* Con trỏ chuột thay đổi khi di chuột qua */
+}
+
+.book-actions-1 button:hover {
+    background-color: #0056b3; /* Màu nền thay đổi khi di chuột qua */
+}
+
+.booklist-page-container {
+    display: flex; /* Biến phần tử cha thành flex container */
+    justify-content: space-between; /* Căn chỉnh phần tử con cách đều nhau */
+    align-items: center; /* Căn chỉnh phần tử con theo chiều dọc */
+}
+
+.advanced-search-container {
+    margin: 20px 0 20px 20px;
+}
+
+
+.edit-button-1 {
+    background-color: #007bff; /* Màu nền xanh đậm */
+    color: #fff; /* Màu chữ trắng */
+    border: none; /* Loại bỏ đường viền */
+    padding: 8px 16px; /* Padding cho nút */
+    border-radius: 4px; /* Bo tròn các góc */
+    cursor: pointer; /* Con trỏ chuột trở thành bàn tay khi di chuột qua */
+    font-weight: bold; /* Tăng độ đậm của chữ */
+    transition: background-color 0.3s; /* Thêm hiệu ứng chuyển đổi màu nền */
+    margin-right:80px;
+}
+
+.edit-button-1:hover {
+    background-color: #0056b3; 
+}
+
+.close-button-2 {
+    background-color: #28a745; /* Màu nền xanh lá */
+    color: #fff; /* Màu chữ trắng */
+    border: none; /* Loại bỏ đường viền */
+    padding: 8px 16px; /* Padding cho nút */
+    border-radius: 4px; /* Bo tròn các góc */
+    cursor: pointer; /* Con trỏ chuột trở thành bàn tay khi di chuột qua */
+    font-weight: bold; /* Tăng độ đậm của chữ */
+    transition: background-color 0.3s; /* Thêm hiệu ứng chuyển đổi màu nền */
+    align-items: flex-end;
+}
+
+.close-button-2:hover {
+    background-color: #218838; /* Màu nền xanh lá đậm hơn khi di chuột qua */
+}
+.checkbox-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* Dịch chuyển lại để căn giữa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
