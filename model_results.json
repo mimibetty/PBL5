@@ -1,0 +1,23 @@
+{
+    "SVC": {
+        "accuracy_train": 1.0
+    },
+    "RandomForest": {
+        "accuracy_train": 1.0
+    },
+    "LogisticRegression": {
+        "accuracy_train": 0.9898477157360406
+    },
+    "DecisionTree": {
+        "accuracy_train": 1.0
+    },
+    "SGDClassifier": {
+        "accuracy_train": 1.0
+    },
+    "GaussianNB": {
+        "accuracy_train": 1.0
+    },
+    "MLPClassifier": {
+        "accuracy_train": 1.0
+    }
+}
